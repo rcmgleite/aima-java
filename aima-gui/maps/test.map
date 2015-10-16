@@ -1,0 +1,12 @@
+test
+5
+North 100 180
+South 200 360
+West 150 90
+East 300 270
+Middle 0 360
+4
+Middle North 100
+Middle South 200
+Middle West 150
+Middle East 300
