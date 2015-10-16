@@ -21,6 +21,7 @@ public class GenericRoadMap extends ExtendableMap {
 	 *	Statics Attrs 
 	 */
 	private static HashMap<String, GenericRoadMap> instances = new HashMap<String, GenericRoadMap>();
+	private static final String USING_COORDINATES = "#coordinates";
 	
 	/*
 	 *	Singleton get instance methods
@@ -88,6 +89,8 @@ public class GenericRoadMap extends ExtendableMap {
 		String completeFilepath = System.getProperty("user.dir") + "/maps/" + filepath;
 		BufferedReader br = new BufferedReader(new FileReader(completeFilepath));
 		try {
+			String buildStrategy = br.readLine();
+			boolean useCoordinates = buildStrategy.equals(USING_COORDINATES) ? true : false; 
 			map.mapName = br.readLine();
 			System.out.println("MAP NAME = " + map.mapName);
 			int nNodes = Integer.parseInt(br.readLine()); // number of map nodes
@@ -95,7 +98,11 @@ public class GenericRoadMap extends ExtendableMap {
 				String line = br.readLine();
 				System.out.println(">> " + line);
 				String[] splitted = line.split(" ");
-                map.setDistAndDirToRefLocation(splitted[0], Integer.parseInt(splitted[1]), Integer.parseInt(splitted[2]));
+				if(useCoordinates) {
+					map.setPosition(splitted[0], Integer.parseInt(splitted[1]), Integer.parseInt(splitted[2]));
+				} else {
+					map.setDistAndDirToRefLocation(splitted[0], Integer.parseInt(splitted[1]), Integer.parseInt(splitted[2]));
+                }
                 map.dsts.add(splitted[0]);
                 map.srcs.add(splitted[0]);
 			}
