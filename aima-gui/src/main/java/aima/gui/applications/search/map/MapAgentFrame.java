@@ -15,20 +15,21 @@ import aima.gui.framework.AgentAppFrame;
 public class MapAgentFrame extends AgentAppFrame {
 	
 	private static final long serialVersionUID = 1L;
-	public static String SCENARIO_SEL = "ScenarioSelection";
-	public static String DESTINATION_SEL = "DestinationSelection";
-	public static String AGENT_SEL = "AgentSelection";
-	public static String SEARCH_SEL = "SearchSelection";
-	public static String SEARCH_MODE_SEL = "SearchModeSelection";
-	public static String HEURISTIC_SEL = "HeuristicSelection";
+	public static final String MAP_SELECTION = "MapSelection";
+	public static final String SOURCE_SEL = "SourceSelection";
+	public static final String DESTINATION_SEL = "DestinationSelection";
+	public static final String AGENT_SEL = "AgentSelection";
+	public static final String SEARCH_SEL = "SearchSelection";
+	public static final String SEARCH_MODE_SEL = "SearchModeSelection";
+	public static final String HEURISTIC_SEL = "HeuristicSelection";
 
 	/** Standard constructor. */
 	public MapAgentFrame() {
-		setSelectors(new String[] { SCENARIO_SEL, DESTINATION_SEL, AGENT_SEL,
-				SEARCH_SEL, SEARCH_MODE_SEL, HEURISTIC_SEL }, new String[] {
-				"Select Scenario", "Select Destinations", "Select Agent",
+		setSelectors(new String[] { SOURCE_SEL, DESTINATION_SEL, AGENT_SEL,
+				SEARCH_SEL, SEARCH_MODE_SEL, HEURISTIC_SEL, MAP_SELECTION }, new String[] {
+				"Select Source", "Select Destinations", "Select Agent",
 				"Select Search Strategy", "Select Search Mode",
-				"Select Heuristic" });
+				"Select Heuristic", "Choose a MAP"});
 		setSelectorItems(SEARCH_SEL, SearchFactory.getInstance()
 				.getSearchStrategyNames(), 5);
 		setSelectorItems(SEARCH_MODE_SEL, SearchFactory.getInstance()

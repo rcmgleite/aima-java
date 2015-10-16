@@ -1,0 +1,46 @@
+Romania
+20
+Arad 366 117
+Bucharest 0 360
+Craiova 160 74
+Dobreta 242 82
+Eforie 161 282
+Fagaras 176 142
+Giurgiu 77 25
+Hirsova 151 260
+Iasi 226 202
+Lugoj 244 102
+Mehadia 241 92
+Neamt 234 181
+Oradea 380 131
+Pitesti 100 116
+Rimnicu_vilcea 193 115
+Sibiu 253 123
+Timisoara 329 105
+Urziceni 80 247
+Vaslui 199 222
+Zerind 374 125
+23
+Oradea Zerind 71.0
+Oradea Sibiu 151.0
+Zerind Arad 75.0
+Arad Timisoara 118.0
+Arad Sibiu 140.0
+Timisoara Lugoj 111.0
+Lugoj Mehadia 70.0
+Mehadia Dobreta 75.0
+Dobreta Craiova 120.0
+Sibiu Fagaras 99.0
+Sibiu Rimnicu_vilcea 80.0
+Rimnicu_vilcea Pitesti 97.0
+Rimnicu_vilcea Craiova 146.0
+Craiova Pitesti 138.0
+Fagaras Bucharest 211.0
+Pitesti Bucharest 101.0
+Giurgiu Bucharest 90.0
+Bucharest Urziceni 85.0
+Neamt Iasi 87.0
+Urziceni Vaslui 142.0
+Urziceni Hirsova 98.0
+Iasi Vaslui 92.0
+Hirsova Eforie 86.0

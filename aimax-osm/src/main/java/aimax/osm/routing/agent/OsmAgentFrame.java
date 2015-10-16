@@ -15,13 +15,13 @@ public class OsmAgentFrame extends MapAgentFrame {
 	public OsmAgentFrame() {
 		setTitle("OMAS - the Osm Map Agent Simulator");
 		setSelectors(new String[]{
-				SCENARIO_SEL, AGENT_SEL,
+				SOURCE_SEL, AGENT_SEL,
 				SEARCH_SEL, SEARCH_MODE_SEL, HEURISTIC_SEL},
 				new String[]{
 				"Select Scenario", "Select Agent",
 				"Select Search Strategy", "Select Search Mode", "Select Heuristic"}
 		);
-		setSelectorItems(SCENARIO_SEL,
+		setSelectorItems(SOURCE_SEL,
 				new String[] {"Use any way", "Travel by car", "Travel by bicycle"}, 0);
 		setSelectorItems(AGENT_SEL,
 				new String[] {"Offline Search", "Online Search (LRTA*)"}, 0);

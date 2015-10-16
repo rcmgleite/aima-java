@@ -34,6 +34,11 @@ public class ExtendableMap implements Map {
 		links = new LabeledGraph<String, Double>();
 		locationPositions = new Hashtable<String, Point2D>();
 	}
+	
+	public ExtendableMap(ExtendableMap map) {
+		links = map.links;
+		locationPositions = map.locationPositions;
+	}
 
 	/** Removes everything. */
 	public void clear() {

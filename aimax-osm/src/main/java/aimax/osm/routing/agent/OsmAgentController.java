@@ -59,7 +59,7 @@ public class OsmAgentController extends AgentAppController {
 		MapAgentFrame.SelectionState state = frame.getSelection();
 
 		map.getOsmMap().getTracks().clear();
-		switch (state.getIndex(MapAgentFrame.SCENARIO_SEL)) {
+		switch (state.getIndex(MapAgentFrame.SOURCE_SEL)) {
 		case 0:
 			map.setMapWayFilter(MapWayAttFilter.createAnyWayFilter());
 			map.ignoreOneways(true);
